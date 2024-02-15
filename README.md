@@ -3,7 +3,7 @@ My goal was to build a Chat app that allows users to create room and do real-tim
 This app is build using web sockets that Socket.io uses internally.
 
 # The app is live here - 
-[Click here to see the live demo](https://5f8db8ab81543495e98f17cd--gallant-archimedes-a7086a.netlify.app)
+[Click here to see the live demo](https://chat-app-client-seven-puce.vercel.app/)
 
 <img src="./home-page.png" alt="the screenshot of the app large screen"/>
 <img src="./chat-page.png" alt="the screenshot of the app large screen"/>

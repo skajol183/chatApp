@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Real-time Chat Application using Socket.io, React.js, Node.js & Express.js
+My goal was to build a Chat app that allows users to create room and do real-time communication. 
+This app is build using web sockets that Socket.io uses internally.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# The app is live here - 
+[Click here to see the live demo](https://5f8db8ab81543495e98f17cd--gallant-archimedes-a7086a.netlify.app)
 
-## Available Scripts
+<img src="./home-page.png" alt="the screenshot of the app large screen"/>
+<img src="./chat-page.png" alt="the screenshot of the app large screen"/>
+<img src="./home-page-mobile.png" alt="the screenshot of the app large screen"/> <img src="./chat-page-mobile.png" alt="the screenshot of the app large screen"/>
 
-In the project directory, you can run:
 
-### `npm start`
+# The project structure is distributed into sections - 
+* client 
+* server
+# The libraries included in this app are - 
+* For the Server side it has the backend packages like -
+  * Node.js 
+  * Express.js(CORS middleware) 
+  * Socket.io 
+  * Nodemon
+* For the Client side - 
+  * React 
+  * React-router-dom
+  * Socket.io Client
+  * react-scroll-to-bottom
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Setting up the server-side
+Most of the server-side setup is done requiring http module and then encapsulating it inside the socket.io. Using express makes setting up easier and allows us to use different middleware like the CORS middleware which has been used here.
+All the handling of the users adding, removing, admin work,... everything is done on the server side. Also used nodemon module to automaate the serving.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Setting up the client-side 
+Firstly, the design is completely mine, asthetics is an important part that I always try to maintain in all of my projects.
+The home page design was build using a tool called blush which allows to make vector illustrations based on humaaans vector graphics.
+The responsive design of the page using media queries will run when opened in a mobile-device.
+Secondly, for React file structure two main components were created Join.js(Homepage) and Chat.js(ChatPage). All the other components were created on top of these main components
+React-router-dom is used for routing and apart from that for smooth scrolling react-scroll-to-bottom for more user interaction just like any other Chat-app. 
 
-### `npm test`
+Both the client and the server is connected using socket.io, the socket.io-client at the client side and socket.io in the server side enables the user to send constant events. There is constant emmiting and listening of events between the client and the server.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Deployment
+The server is deployed using Heroku and the client is deployed using Github Pages.
 
-### `npm run build`
+# Features
+* It shows the current users who are in the chat,
+* It welcomes when user join the chat 
+* Send notifications all members when any user joins or left the chat,
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Future Scope
+* This app is currently session based and does not at any circumstances stores. 
+* Will be connected to a database either FIrebase or MongoDB to act as cache so that users can take a look at their previous chats.
+* A column will be added to show all the online users.
+* The ability to add images, videos and docs.
+* To add a variety of emojis more easily

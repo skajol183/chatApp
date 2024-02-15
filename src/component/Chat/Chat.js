@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import socketIo from "socket.io-client";
-import "./Chat.css";
+import "./Chat.scss";
 import ReactScrollToBottom from "react-scroll-to-bottom";
 import closeIcon from "../../images/closeIcon.png";
-import sendLogo from "../../images/send.png";
 import { candidate } from "../Join/Join";
 
 let socket;
@@ -87,7 +86,6 @@ const Chat = () => {
             </div>
           ))}
         </ReactScrollToBottom>
-
         <form
           className="inputBox"
           action="#"
@@ -101,7 +99,7 @@ const Chat = () => {
             onChange={(e) => setMessageInput(e.target.value)}
           />
           <button type="submit" className="sendBtn">
-            <img src={sendLogo} alt="Send" />
+            Send
           </button>
         </form>
       </div>

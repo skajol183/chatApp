@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 import Join from "./component/Join/Join";
 import Chat from "./component/Chat/Chat";

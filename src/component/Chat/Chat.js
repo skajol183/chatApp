@@ -7,7 +7,7 @@ import sendLogo from "../../images/send.png";
 import { candidate } from "../Join/Join";
 
 let socket;
-// const ENDPOINT = "http://localhost:5000/";
+const ENDPOINT = "http://localhost:5000/";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -32,6 +32,44 @@ const Chat = () => {
       setMessageInput("");
     }
   };
+
+  useEffect(() => {
+    socket = socketIo(ENDPOINT, { transports: ["websocket"] });
+
+    // socket on when user connect the chat
+    socket.on("connect", () => {
+      alert(`${candidate} Connected`);
+    });
+
+    // socket on when new user join the chat to show others
+    socket.emit("new-user-joined", candidate);
+
+    // socket on for welcoming user
+    socket.on("welcome", (name) => {
+      appendMessage(`Admin: Welcome to the chat ${name}`, "left");
+    });
+
+    // socket on when new user join the chat to show others
+    socket.on("user-joined", (name) => {
+      appendMessage(`${name} joined the chat`, "left");
+    });
+
+    // socket on when user get messages from others
+    socket.on("receive", (data) => {
+      console.log(data, "sendData");
+      appendMessage(`${data.name}: ${data.message}`, "left");
+    });
+
+    // socket on when any user left the chat to show others
+    socket.on("left", (name) => {
+      appendMessage(`${name} left the chat`, "left");
+    });
+
+    return () => {
+      socket.disconnect();
+      socket.off();
+    };
+  }, []);
 
   return (
     <div className="chatPage">

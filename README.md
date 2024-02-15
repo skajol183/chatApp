@@ -34,7 +34,7 @@ React-router-dom is used for routing and apart from that for smooth scrolling re
 Both the client and the server is connected using socket.io, the socket.io-client at the client side and socket.io in the server side enables the user to send constant events. There is constant emmiting and listening of events between the client and the server.
 
 # Deployment
-The server is deployed using Heroku and the client is deployed using Github Pages.
+The server is deployed using Vercel and the client is deployed using Vercel.
 
 # Features
 * It shows the current users who are in the chat,

@@ -3,12 +3,7 @@ My goal was to build a Chat app that allows users to create room and do real-tim
 This app is build using web sockets that Socket.io uses internally.
 
 # The app is live here - 
-[Click here to see the live demo](https://5f8db8ab81543495e98f17cd--gallant-archimedes-a7086a.netlify.app)
-
-<img src="./home-page.png" alt="the screenshot of the app large screen"/>
-<img src="./chat-page.png" alt="the screenshot of the app large screen"/>
-<img src="./home-page-mobile.png" alt="the screenshot of the app large screen"/> <img src="./chat-page-mobile.png" alt="the screenshot of the app large screen"/>
-
+[Click here to see the live demo](https://chat-app-client-seven-puce.vercel.app/)
 
 # The project structure is distributed into sections - 
 * client 
@@ -39,7 +34,7 @@ React-router-dom is used for routing and apart from that for smooth scrolling re
 Both the client and the server is connected using socket.io, the socket.io-client at the client side and socket.io in the server side enables the user to send constant events. There is constant emmiting and listening of events between the client and the server.
 
 # Deployment
-The server is deployed using Heroku and the client is deployed using Github Pages.
+The server is deployed using Vercel and the client is deployed using Vercel.
 
 # Features
 * It shows the current users who are in the chat,

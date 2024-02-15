@@ -5,57 +5,77 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  & .JoinContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #083863;
+    border-radius: 10px;
+    padding: 20px 0;
+    & img {
+      width: 10vmax;
+    }
+    & h1 {
+      color: #083863;
+      font-size: 2.5vmax;
+      width: 25vmax;
+      border-bottom: 0.2vmax solid #083863;
+      text-align: center;
+      padding: 1vmax;
+      font-family: "Roboto";
+      box-sizing: border-box;
+    }
+    & #joinInput {
+      width: 25vmax;
+      padding: 1.5vmax;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      font-size: 1.2vmax;
+      margin: 2vmax;
+      font-family: "Roboto";
+      box-sizing: border-box;
+    }
+    & .joinBtn {
+      width: 25vmax;
+      padding: 1.5vmax;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-family: "Roboto";
+      outline: none;
+      font-size: 1.2vmax;
+      box-sizing: border-box;
+      transition: all 0.3s;
+      cursor: pointer;
+      background-color: #083863;
+    }
+    & .joinBtn:hover {
+      background-color: #00acea;
+    }
+  }
 }
 
-.JoinContainer {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #083863;
-  border-radius: 10px;
-  padding: 20px 0;
-}
-
-.JoinContainer > img {
-  width: 10vmax;
-}
-.JoinContainer > h1 {
-  color: #083863;
-  font-size: 2.5vmax;
-  width: 25vmax;
-  border-bottom: 0.2vmax solid #083863;
-  text-align: center;
-  padding: 1vmax;
-  font-family: "Roboto";
-  box-sizing: border-box;
-}
-
-#joinInput {
-  width: 25vmax;
-  padding: 1.5vmax;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  font-size: 1.2vmax;
-  margin: 2vmax;
-  font-family: "Roboto";
-  box-sizing: border-box;
-}
-.joinbtn {
-  width: 25vmax;
-  padding: 1.5vmax;
-  border: none;
-  border-radius: 10px;
-  color: white;
-  font-family: "Roboto";
-  outline: none;
-  font-size: 1.2vmax;
-  box-sizing: border-box;
-  transition: all 0.3s;
-  cursor: pointer;
-  background-color: #083863;
-}
-.joinbtn:hover {
-  background-color: #00acea;
+@media (max-aspect-ratio: 7/10) {
+  .JoinPage {
+    & .JoinContainer {
+      width: 100%;
+      border: 0px;
+      & img {
+        width: 15vmax;
+      }
+      & h1 {
+        font-size: 3vmax;
+      }
+      & #joinInput {
+        height: 50px;
+        font-size: 1.5vmax;
+      }
+      & .joinBtn {
+        font-size: 1.5vmax;
+        height: 50px;
+      }
+    }
+  }
 }

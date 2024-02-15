@@ -5,7 +5,7 @@ const cors = require("cors");
 const socketIO = require("socket.io");
 
 const app = express();
-const port = process.env.PORT;
+const port = 5000 || process.env.PORT;
 
 // Use an object to store user information with socket IDs as keys
 const users = {};

@@ -5,11 +5,6 @@ This app is build using web sockets that Socket.io uses internally.
 # The app is live here - 
 [Click here to see the live demo](https://chat-app-client-seven-puce.vercel.app/)
 
-<img src="./home-page.png" alt="the screenshot of the app large screen"/>
-<img src="./chat-page.png" alt="the screenshot of the app large screen"/>
-<img src="./home-page-mobile.png" alt="the screenshot of the app large screen"/> <img src="./chat-page-mobile.png" alt="the screenshot of the app large screen"/>
-
-
 # The project structure is distributed into sections - 
 * client 
 * server

@@ -8,6 +8,8 @@ import { candidate } from "../Join/Join";
 let socket;
 const ENDPOINT = "https://chat-app-sever-gvi3b9byy-redcliffe.vercel.app/";
 
+let checking; // for checking
+
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState("");

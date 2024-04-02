@@ -10,7 +10,14 @@ const port = process.env.PORT;
 // Use an object to store user information with socket IDs as keys
 const users = {};
 
-app.use(cors()); // cors is used for inter communication between url
+app.use(
+  cors({
+    origin: ["https://chat-app-client-seven-puce.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+); // cors is used for inter communication between url
+
 app.get("/", (req, res) => {
   res.send("SERVER IS WORKING");
 });

@@ -6,9 +6,7 @@ import closeIcon from "../../images/closeIcon.png";
 import { candidate } from "../Join/Join";
 
 let socket;
-const ENDPOINT = "https://chat-app-sever-gvi3b9byy-redcliffe.vercel.app/";
-
-let checking; // for checking
+const ENDPOINT = "https://chat-app-sever-gvi3b9byy-redcliffe.vercel.app";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
